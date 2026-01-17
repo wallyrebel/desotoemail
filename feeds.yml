@@ -1,0 +1,18 @@
+# DeSoto Email RSS Digest - Example Feeds Configuration
+# Each feed has:
+#   - name: Display name for the source
+#   - url: RSS/Atom feed URL
+#   - category: Optional tag/category for grouping
+
+feeds:
+  - name: "DeSoto County News"
+    url: "https://www.desotocountynews.com/feed/"
+    category: "local"
+
+  - name: "Mississippi Today"
+    url: "https://mississippitoday.org/feed/"
+    category: "state"
+
+  - name: "Memphis Commercial Appeal"
+    url: "https://www.commercialappeal.com/arcio/rss/"
+    category: "regional"
