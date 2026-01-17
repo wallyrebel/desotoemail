@@ -131,8 +131,8 @@ def compose_html_email(articles: List[Dict], date_str: str) -> str:
 </head>
 <body>
     <div class="header">
-        <h1>📰 Daily RSS Digest</h1>
-        <p>""" + date_str + """ • DeSoto County</p>
+        <h1>📰 Potential DeSoto County News Stories</h1>
+        <p>""" + date_str + """</p>
     </div>
     <div class="content">
 """
@@ -390,7 +390,7 @@ def send_digest(
     # Compose email
     html_body = compose_html_email(articles, date_str)
     plain_body = compose_plain_text_email(articles, date_str)
-    subject = f"Daily RSS Digest — {date_str}"
+    subject = f"Potential DeSoto County News Stories — {date_str}"
     
     # Send
     success = send_email(

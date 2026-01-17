@@ -1,18 +1,70 @@
-# DeSoto Email RSS Digest - Example Feeds Configuration
-# Each feed has:
-#   - name: Display name for the source
-#   - url: RSS/Atom feed URL
-#   - category: Optional tag/category for grouping
+# DeSoto Email RSS Digest - Feeds Configuration
 
 feeds:
-  - name: "DeSoto County News"
-    url: "https://www.desotocountynews.com/feed/"
+  - name: "DeSoto Source 1"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhClV2mSEJm.rss"
     category: "local"
 
-  - name: "Mississippi Today"
-    url: "https://mississippitoday.org/feed/"
-    category: "state"
+  - name: "DeSoto Source 2"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCmJ0IyGJO.rss"
+    category: "local"
 
-  - name: "Memphis Commercial Appeal"
-    url: "https://www.commercialappeal.com/arcio/rss/"
-    category: "regional"
+  - name: "DeSoto Source 3"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vcwwqEms7Aw.rss"
+    category: "local"
+
+  - name: "DeSoto Source 4"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vcd177VRDEB.rss"
+    category: "local"
+
+  - name: "DeSoto Source 5"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCnzALf57y.rss"
+    category: "local"
+
+  - name: "DeSoto Source 6"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vfoORA4wG0o.rss"
+    category: "local"
+
+  - name: "DeSoto Source 7"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vcwxo26ADKt.rss"
+    category: "local"
+
+  - name: "DeSoto Source 8"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCpw79HF3y.rss"
+    category: "local"
+
+  - name: "DeSoto Source 9"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCql2CK9GE.rss"
+    category: "local"
+
+  - name: "DeSoto Source 10"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCrnFg5EPi.rss"
+    category: "local"
+
+  - name: "DeSoto Source 11"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCsg77bAmw.rss"
+    category: "local"
+
+  - name: "DeSoto Source 12"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCtnBN10Z8.rss"
+    category: "local"
+
+  - name: "DeSoto Source 13"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCvFAPq3EK.rss"
+    category: "local"
+
+  - name: "DeSoto Source 14"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhCxD2CK9GF.rss"
+    category: "local"
+
+  - name: "DeSoto Source 15"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhD0bCMwAMs.rss"
+    category: "local"
+
+  - name: "DeSoto Source 16"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhD52Akw9XH.rss"
+    category: "local"
+
+  - name: "DeSoto Source 17"
+    url: "https://fetchrss.com/feed/1vcaujD2G3c21vhD7c9TI0MV.rss"
+    category: "local"
