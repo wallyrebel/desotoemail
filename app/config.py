@@ -84,6 +84,7 @@ def load_config() -> dict:
         
         # Optional settings
         "dry_run": get_optional_env("DRY_RUN", "false").lower() == "true",
+        "force_send": get_optional_env("FORCE_SEND", "false").lower() == "true",
         "no_news_behavior": get_optional_env("NO_NEWS_BEHAVIOR", "skip"),  # skip or send_empty
         
         # Model configuration

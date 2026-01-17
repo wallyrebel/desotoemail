@@ -80,8 +80,14 @@ def main():
     # Load state
     state = StateStore()
     
-    # Check if we should send
-    should_send, reason = should_send_digest(now_chicago, state)
+    # Check if we should send (or if force_send is enabled)
+    if config.get("force_send"):
+        logger.info("FORCE_SEND enabled, skipping time check")
+        should_send = True
+        reason = "FORCE_SEND enabled"
+    else:
+        should_send, reason = should_send_digest(now_chicago, state)
+    
     if not should_send:
         logger.info(f"Skipping digest: {reason}")
         logger.info("Exiting (nothing to do)")

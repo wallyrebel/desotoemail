@@ -1,4 +1,21 @@
 {
-  "processed_ids": {},
-  "last_sent_date": null
+  "processed_ids": {
+    "https://www.desotocountynews.com/feed/": [
+      "https://desotocountynews.com/?p=69358",
+      "https://desotocountynews.com/?p=69353",
+      "https://desotocountynews.com/?p=69347",
+      "https://desotocountynews.com/?p=69342",
+      "https://desotocountynews.com/?p=69336",
+      "https://desotocountynews.com/?p=69205",
+      "https://desotocountynews.com/?p=69282",
+      "https://desotocountynews.com/?p=69156",
+      "https://desotocountynews.com/?p=69022",
+      "https://desotocountynews.com/?p=69141"
+    ],
+    "https://mississippitoday.org/feed/": [
+      "https://mississippitoday.org/?p=1165269",
+      "https://mississippitoday.org/?p=1165055"
+    ]
+  },
+  "last_sent_date": "2026-01-17"
 }
