@@ -1,14 +1,8 @@
 name: Daily RSS Digest
 
 on:
-  schedule:
-    # Run every 30 minutes (UTC) to ensure we catch the 5 PM Chicago window
-    # Chicago is UTC-6 in winter, UTC-5 in summer (DST)
-    # 5 PM Chicago = 23:00 UTC (winter) or 22:00 UTC (summer)
-    - cron: '*/30 * * * *'
-  
   workflow_dispatch:
-    # Allow manual runs
+    # Retained for tests; digest emails are disabled below.
 
 concurrency:
   group: daily-digest
@@ -19,6 +13,8 @@ permissions:
 
 jobs:
   digest:
+    # Disabled at the owner's request; re-enable explicitly before sending emails.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     
     steps:
