@@ -2,7 +2,7 @@
 feedparser>=6.0.10
 
 # OpenAI SDK
-openai>=1.14.0
+openai>=2.48.0
 
 # HTTP client
 requests>=2.31.0

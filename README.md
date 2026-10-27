@@ -5,7 +5,7 @@ A production-reliable automated RSS digest system that reads RSS feeds, rewrites
 ## Features
 
 - **Multi-feed support**: Configure multiple RSS/Atom feeds in `feeds.yml`
-- **AP-style rewriting**: Articles rewritten using OpenAI (gpt-5-mini with gpt-4.1-nano fallback)
+- **AP-style rewriting**: Articles rewritten using OpenAI (gpt-5-mini with gpt-6-luna fallback)
 - **Featured image extraction**: Automatically extracts images from RSS or article pages
 - **Deduplication**: Tracks processed articles to prevent duplicate sends
 - **Chicago timezone aware**: Sends at 5 PM Chicago time, handles DST correctly
@@ -192,7 +192,7 @@ pytest tests/ -v --cov=app --cov-report=term-missing
 ### OpenAI API errors
 - Verify API key is valid and has credits
 - Check for rate limiting (the script retries automatically)
-- Primary model falls back to gpt-4.1-nano on failure
+- Primary model falls back to gpt-6-luna on failure
 
 ### Workflow not running
 - Check Actions tab for workflow status

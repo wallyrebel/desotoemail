@@ -9,6 +9,7 @@ import time
 from typing import Optional, List, Dict, Any
 
 from openai import OpenAI, APIError, RateLimitError, APIConnectionError
+from app.model_options import chat_model_params, resolve_retired_model
 
 from app.config import OPENAI_MAX_RETRIES
 
@@ -28,8 +29,8 @@ class OpenAIClient:
         max_retries: int = OPENAI_MAX_RETRIES
     ):
         self.client = OpenAI(api_key=api_key)
-        self.primary_model = primary_model
-        self.fallback_model = fallback_model
+        self.primary_model = resolve_retired_model(primary_model)
+        self.fallback_model = resolve_retired_model(fallback_model)
         self.max_retries = max_retries
     
     def _call_with_retry(
@@ -45,12 +46,12 @@ class OpenAIClient:
         """
         for attempt in range(self.max_retries):
             try:
-                response = self.client.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                )
+                response = self.client.chat.completions.create(**chat_model_params({
+                    "model": model,
+                    "messages": messages,
+                    "temperature": temperature,
+                    "max_tokens": max_tokens,
+                }))
                 
                 return response.choices[0].message.content
                 

@@ -32,7 +32,7 @@ HTTP_BACKOFF_FACTOR = 2  # exponential backoff multiplier
 # OPENAI CONFIGURATION
 # ============================================================================
 OPENAI_PRIMARY_MODEL = "gpt-5-mini"
-OPENAI_FALLBACK_MODEL = "gpt-4.1-nano"
+OPENAI_FALLBACK_MODEL = "gpt-6-luna"
 OPENAI_MAX_RETRIES = 5
 OPENAI_MAX_INPUT_CHARS = 12000  # Truncate content beyond this
 
