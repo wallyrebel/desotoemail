@@ -5,11 +5,12 @@ Handles API calls with retry logic for rate limits and server errors.
 
 import logging
 import random
+import re
 import time
 from typing import Optional, List, Dict, Any
 
 from openai import OpenAI, APIError, RateLimitError, APIConnectionError
-from app.model_options import chat_model_params, resolve_retired_model
+from app.model_options import chat_model_params, resolve_retired_model, replacement_payload_problem
 
 from app.config import OPENAI_MAX_RETRIES
 
@@ -53,7 +54,14 @@ class OpenAIClient:
                     "max_tokens": max_tokens,
                 }))
                 
-                return response.choices[0].message.content
+                content = response.choices[0].message.content
+                if resolve_retired_model(model) == "gpt-6-luna" and isinstance(content, str):
+                    heading = re.search(r"HEADLINE:\s*([^\n]+)", content)
+                    body = re.search(r"BODY:\s*([\s\S]*?)(?:SOURCE:|$)", content)
+                    payload = {"headline": heading.group(1) if heading else "", "body": body.group(1) if body else content}
+                    if replacement_payload_problem(payload):
+                        return None
+                return content
                 
             except RateLimitError as e:
                 wait_time = min(60 * (2 ** attempt), 120)  # Max 2 minutes
